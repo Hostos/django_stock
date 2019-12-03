@@ -1,0 +1,42 @@
+commands used:
+- source venv/bin/activate
+- deactivate (when inside the venv)
+- django-admin startproject 
+- python manage.py runserver
+- python manage.py migrate
+- python manage.py createsuperuser
+- python manage.py startapp quotes
+- python -m venv venv
+- python3  -m venv venv
+- python manage.py makemigrations; python manage.py migrate #need to do a migration to push changes to our models.py into the db
+
+pip commands used:
+- pip freeze
+- pip install django
+- pip install requests
+
+
+path flow: 
+1) localhost/ is hit in browser
+2) urls.py is read (in main stocks app/dir), the '' is read and points to the quotes folder's urls.py file
+3) insides the urls.py inside quotes dir, the '' points us to views.py file and calls the home function
+4) the home function is called/started, it then renders the home.html file   
+
+
+a base file:
+- allows us to control header and footer for example so we have one place to make changes like those
+- {% %} ; allows you to effectively have embedded python code in a html file
+
+iexcloud api provider:
+- # pk_ae69150502ec41a5a40c7651c7df9d34
+- https://iexcloud.io/console/tokens
+- https://iexcloud.io/docs/api/#companyp
+
+ssh / github stuff:
+- https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+- git init
+- add .
+- git commit -am "initial commit"
+- git remote add origin git@github.com:Hostos/django_stock.git
+- git push -u origin master
+
